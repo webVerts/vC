@@ -1,0 +1,23 @@
+{
+
+"verifyWith":[
+{
+"name": ["South Indian Bank","SIB"],
+"type": "Bank"
+},
+{
+"name": ["State Bank Of India","SBI"],
+"type": "Bank"
+},
+{
+"name": ["Punjab National Bank","PNB"],
+"type": "Bank"
+}
+
+
+
+
+
+
+
+]}
