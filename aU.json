@@ -2,17 +2,17 @@
   {
     "name": "Test 1",
     "urls": [
-      "a.com",
-      "b.com",
-      "c.com"
+      "a.com","www.a.com",
+      "b.com","www.b.com",
+      "c.com","www.c.com"
     ]
   },
   {
     "name": "Test 2",
     "urls": [
-      "d.com",
-      "f.com",
-      "g.com"
+      "d.com","www.d.com",
+      "f.com","www.f.com",
+      "g.com","www.g.com"
     ]
   }
 ]
