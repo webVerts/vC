@@ -12642,6 +12642,14 @@
       "xx.com","www.xx.com",
       "zz.com","www.zz.com"
     ]
+  },
+   {
+    "name": "Test Zero",
+    "urls": [
+      "toi.com","www.toi.com",
+      "to.com","www.to.com",
+      "oi.com","www.oi.com"
+    ]
   }
 
 
