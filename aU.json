@@ -23550,11 +23550,11 @@
     ]
   },
   {
-    "name": "Test 2",
+    "name": "Google",
     "urls": [
       "d.com","www.d.com",
       "f.com","www.f.com",
-      "g.com","www.g.com"
+      "google.com","www.google.com"
     ]
   },
   {
