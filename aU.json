@@ -6320,7 +6320,7 @@
       "x.com","www.x.com",
       "z.com","www.z.com"
     ]
-  }[
+  },
   {
     "name": "Test 1",
     "urls": [
@@ -12643,7 +12643,7 @@
       "zz.com","www.zz.com"
     ]
   }
-]
+
 
   
   
