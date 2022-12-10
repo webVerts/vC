@@ -1,0 +1,29 @@
+{
+	"copyright": "me",
+	"source": [
+		{
+			"name": "Test 1",
+			"urls": [
+				"a.com",
+				"www.a.com",
+				"https://a.com",
+				"https://www.a.com",
+				"b.com",
+				"www.b.com",
+				"c.com",
+				"www.c.com"
+			]
+		},
+		{
+			"name": "Test 2",
+			"urls": [
+				"d.com",
+				"www.d.com",
+				"f.com",
+				"www.f.com",
+				"g.com",
+				"www.g.com"
+			]
+		}
+	]
+}
