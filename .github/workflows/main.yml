@@ -28,17 +28,26 @@ jobs:
         id: chrome-zip
         with: 
             filename: chromium.zip
-            directory: chrome 
-         
             
-     
-           
-      - name: Upload asset to Github Release
-        uses: softprops/action-gh-release@v1
+      - name: Schedule Release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        id: create-release
         
         with:
-          files: |
-              license.txt
-              chromium.zip
-        
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "v0.1.1"
+          draft: true
+          
+           
+      - name: Upload Release Asset
+     
+        id: upload-release-asset 
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create-release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
+          asset_path: ./chromium.zip
+          asset_name: chromium.zip
+          asset_content_type: application/zip
             
