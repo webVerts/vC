@@ -24,6 +24,7 @@ jobs:
         
       - name: Zip Chromium
         uses: thedoctor0/zip-release@main
+        id: zip-chrome
         with: 
             filename: chromium.zip
             directory: chrome 
@@ -32,6 +33,7 @@ jobs:
       - name: Schedule Release
         uses: "marvinpinto/action-automatic-releases@latest"
         id: create-release
+        
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "v0.1.1"
