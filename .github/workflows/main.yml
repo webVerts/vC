@@ -41,4 +41,4 @@ jobs:
           files: |
             license.txt
             chromium.zip
-            chrome
+            
