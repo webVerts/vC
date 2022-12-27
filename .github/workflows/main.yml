@@ -31,11 +31,11 @@ jobs:
             
       - name: Schedule Release
         uses: "marvinpinto/action-automatic-releases@latest"
+        id: create-release
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "v0.1.1"
           draft: true
-          
           files: |
             LICENSE.txt
-            chromium.zip
+            chrome
