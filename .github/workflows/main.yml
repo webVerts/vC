@@ -26,7 +26,7 @@ jobs:
         uses: thedoctor0/zip-release@main
         with: 
             filename: chromium.zip
-            directory: chrome 
+            directory: test2 
             exclusions: '*.git*  *.gitignore* /*individualdownload/*'
             
       - name: Schedule Release
@@ -37,4 +37,4 @@ jobs:
           automatic_release_tag: "v0.1.1"
           draft: true
           files: |
-            chrome
+            test2
