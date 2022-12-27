@@ -41,7 +41,11 @@ jobs:
           echo: Release name ${{ steps.chrome-zip.outputs.chromium.zip }}
           draft: true
           files: |
-            license.txt
-            chromium.zip
-            chrome
+      - name: Upload asset to Github Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+              license.txt
+              chromium.zip
+        
             
