@@ -32,26 +32,16 @@ jobs:
           directory: chrome
           exclusions: '*.git* /*node_modules/* .editorconfig'
     
-      - name: Create Github Release
-        id: create-new-release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
+      - name: Schedult Release
+        id: schedule-release
+        uses: marvinpinto/action-automatic-release@latest
         with:
-          tag_name: v0.3.0
-          release_name: Release v0.3.0
-      
-      - name: Upload release asset
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-           upload_url: ${{ steps.create-new-release.outputs.upload_url }}
-           asset_path: chrome/chromium.zip
-           asset_name: chromium_latest.zip 
-           asset_content_type: application/zip
-      
-          
+          repo_token: ${{ secrets.GITHUB_TOKEN }}  
         
-     
-     
+          automatic_release_tag: v0.3.1
+          draft: true
+          files: |
+            license.txt
+            chrome/chromium.zip
+      
+      
