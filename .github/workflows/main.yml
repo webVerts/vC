@@ -31,14 +31,7 @@ jobs:
             directory: chrome 
          
             
-      - name: Schedule Release
-        uses: "marvinpinto/action-automatic-releases@latest"
-        id: create-release
-        
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "v0.1.1"
-          draft: true
+     
            
       - name: Upload asset to Github Release
         uses: softprops/action-gh-release@v1
