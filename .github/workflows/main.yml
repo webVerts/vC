@@ -39,7 +39,7 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}  
         
           automatic_release_tag: "latest"
-          title: "v0.1.1"
+          title: "v0.1.3"
           draft: true
           files: |
            
