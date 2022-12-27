@@ -24,7 +24,7 @@ jobs:
         
       - name: Zip Chromium
         uses: thedoctor0/zip-release@main
-        exclusions: '*.git* /*individualdownload/* .editorconfig'
+     
         id: chrome-zip
         with: 
             filename: chromium.zip
