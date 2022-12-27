@@ -24,7 +24,8 @@ jobs:
         
       - name: Zip Chromium
         uses: thedoctor0/zip-release@main
-   
+        exclusions: '*.git* /*individualdownload/* .editorconfig'
+        id: chrome-zip
         with: 
             filename: chromium.zip
             directory: chrome 
@@ -37,6 +38,7 @@ jobs:
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "v0.1.1"
+          echo: Release name ${{ steps.chrome-zip.outputs.chromium.zip }}
           draft: true
           files: |
             license.txt
