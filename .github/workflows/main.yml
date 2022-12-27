@@ -24,7 +24,7 @@ jobs:
         
       - name: Zip Chromium
         uses: thedoctor0/zip-release@main
-        id: zip-chrome
+   
         with: 
             filename: chromium.zip
             directory: chrome 
@@ -40,3 +40,5 @@ jobs:
           draft: true
           files: |
             LICENSE
+            chromium.zip
+            chrome
