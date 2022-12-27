@@ -1,7 +1,14 @@
-on: push
+name: Release
+on:
+    create:
+        branches: master
+     workflow_dispatch:
+     
 jobs:
-    first-job:
-      runs-on: windows-latest
-      steps:
-        - run: node --version
-        - run: npm --version
+  build:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone Repo
+        uses: actions/checkout@v3
+        
