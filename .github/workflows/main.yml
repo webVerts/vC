@@ -28,3 +28,13 @@ jobs:
             filename: chromium.zip
             directory: chrome 
             exclusions: '*.git*  *.gitignore* /*individualdownload/*'
+            
+      - name: Schedule Release
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: false
+          files: |
+            LICENSE.txt
+            chromium.zip
