@@ -23,22 +23,30 @@ jobs:
     
         
       - name: Zip Chromium
-        uses: thedoctor0/zip-release@main
+    uses: thedoctor0/zip-release@main
      
-        id: chrome-zip
-        with: 
-            filename: chromium.zip
+    id: chrome-zip
+    with: 
+        type: zip
+        filename: chromium.zip
+        directory: chrome
+        exclusions: '*.git* /*node_modules/* .editorconfig'
             
-      - name: Schedule Release
-        uses: "marvinpinto/action-automatic-releases@latest"
-        id: create-release
-        
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          automatic_release_tag: "v0.2.1"
-          title: Release ${{ github.ref }} by ${{ github.actor }}
-          draft: true
-          
-           
- 
-            
+  - name: Create Github Release
+      id: create-new-release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v0.3.0
+        release_name: Release v0.3.0
+    
+- name: Upload release asset
+  uses: actions/upload-release-asset@v1
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  with:
+    upload_url: ${{ steps.create-new-release.outputs.upload_url }}
+    asset_path: chrome/chromium.zip
+    asset_name: chromium_latest.zip 
+    asset_content_type: application/zip
