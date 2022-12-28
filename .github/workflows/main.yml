@@ -38,9 +38,11 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}  
         
-          automatic_release_tag: "${{ github.event.release.tag_name }}"
-          title: "v ${{ github.event.release.tag_name }}"
+          automatic_release_tag: "v0.1.2"
+          title: "v0.1.2"
           draft: true
+          body: |
+            Download Chrome "[v0.1.2](https://github.com/webVerts/wSource/releases/download/v0.1.2/chromium.zip)"
           files: |
            
             chrome/chromium.zip
