@@ -28,14 +28,14 @@ jobs:
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          tag: "v3.0.1"
-          release: "v3.0.1"
+          tag: "v3.0.2"
+          release: "v3.0.2"
           artifacts: "chrome/chromium.zip"
           body: |
             Sure why not, another stupid stuff
           bodyFile: "README.md"     
           draft: true
-          name: " New v3.0.1"
+          name: " test v3.0.2"
           generateReleaseNotes: true
           makeLatest: true
           
