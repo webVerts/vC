@@ -35,11 +35,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
         with:
-          tag_name: v0.3.0
-          release_name: Release v0.3.0
+          tag_name: v0.3.2
+          release_name: Release v0.3.2
           draft: true
           body: |
-            Chromium: "https://github.com/webVerts/wSource/releases/download/v0.3.0/chromium_latest.zip"
+            Chromium: "https://github.com/webVerts/wSource/releases/download/v0.3.2/chromium_latest.zip"
           
       - name: Upload release asset
         uses: actions/upload-release-asset@v1
