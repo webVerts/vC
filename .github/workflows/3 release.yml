@@ -33,7 +33,7 @@ jobs:
           artifacts: "chrome/chromium.zip"
           body: |
             This is how the world see
-          bodyFile: "chrome/chromium.zip"     
+          bodyFile: ".readme.md"     
           draft: true
           name: " New v3.0.0"
           generateReleaseNotes: true
