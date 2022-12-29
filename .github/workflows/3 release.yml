@@ -31,8 +31,7 @@ jobs:
           tag: "v3.0.0"
           release: "v3.0.0"
           artifacts: "chrome/chromium.zip"
-          body: |
-            This is how the world see
+         
           bodyFile: "README.md"     
           draft: true
           name: " New v3.0.0"
