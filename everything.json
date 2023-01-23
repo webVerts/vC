@@ -2,12 +2,12 @@
 
 "verifyWith":[
 {
-"name": ["South Indian Bank","SIB"],
+"name": ["name 1 , name 2 , name 3 , name 4, name 5, name 6, name 7"],
 "type": "Bank",
 "urls": ["www.a.com","www.b.com","www.c.com"]  
 },
 {
-"name": ["State Bank Of India","SBI"],
+"name": ["name 11 , name 12 , name 13 , name 14 , name 15 ,  name 16 "],
 "type": "Bank"
 },
 {
