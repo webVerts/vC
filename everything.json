@@ -2,7 +2,7 @@
 
 "verifyWith":[
 {
-"name": "game 1 / Game 2 / Game 3 / game 4 / Game 5 / game 6 / game 7",
+"name": ["I", "am", "stupid","and","mental"],
 "type": "Bank",
 "urls": ["www.a.com","www.b.com","www.c.com"]  
 },
