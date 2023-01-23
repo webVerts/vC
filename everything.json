@@ -7,11 +7,11 @@
 "urls": ["www.a.com","www.b.com","www.c.com"]  
 },
 {
-"name": "game 11 / Game 12 / game 13 / game 14 / game 15 / game 16 ",
+"name": ["po","ba"],
 "type": "Bank"
 },
 {
-"name": "Punjab National Bank / PNB",
+"name": ["Punjab National Bank , PNB"],
 "type": "Bank"
 },
 {
