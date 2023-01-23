@@ -3,7 +3,8 @@
 "verifyWith":[
 {
 "name": ["South Indian Bank","SIB"],
-"type": "Bank"
+"type": "Bank",
+"urls": ["www.a.com","www.b.com","www.c.com"]  
 },
 {
 "name": ["State Bank Of India","SBI"],
