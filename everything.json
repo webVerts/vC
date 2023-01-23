@@ -2,12 +2,12 @@
 
 "verifyWith":[
 {
-"name": ["name 1 / name 2 / name 3 / name 4 / name 5 / name 6 / name 7"],
+"name": ["game 1 / Game 2 / Game 3 / game 4 / Game 5 / game 6 / game 7"],
 "type": "Bank",
 "urls": ["www.a.com","www.b.com","www.c.com"]  
 },
 {
-"name": ["name 11 / name 12 / name 13 / name 14 / name 15 / name 16 "],
+"name": ["game 11 / Game 12 / game 13 / game 14 / game 15 / game 16 "],
 "type": "Bank"
 },
 {
