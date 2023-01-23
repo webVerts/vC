@@ -2,7 +2,7 @@
 
 "verifyWith":[
 {
-"name": ["I", "am", "stupid","and","mental"],
+"name": [" I ", " am ", " stupid "," and "," mental "],
 "type": "Bank",
 "urls": ["www.a.com","www.b.com","www.c.com"]  
 },
