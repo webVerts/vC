@@ -13,7 +13,11 @@
 {
 "name": "Punjab National Bank / PNB",
 "type": "Bank"
-}
+},
+{
+"name": ["Stupid", "Ideas", "ForSale"],
+"type": "Bank"
+}  
 
 
 
