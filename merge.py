@@ -10,4 +10,5 @@ for filename in glob.glob(path, recursive=True):
         result.append(json.load(infile))
 with open("merged_file.json", "w") as outfile:
      json.dump(result, outfile) 
+     print(result)
        
