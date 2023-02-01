@@ -1,2 +1,2 @@
-glob==8.1.0
+glob
 json
