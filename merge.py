@@ -9,5 +9,6 @@ with open('everythingdata.json', 'w') as o1:
   o1.write(cp)
   json.dump(f2, o1)
   o1.write('}')
+    print(cp)
         
        
