@@ -1,14 +1,13 @@
 import json
-with open('data.json') as f1:
-    f2 = json.load(f1)
-    data = json.dumps(f2)
+import glob
 
-cp = '{ "copyright":"me", "source" :'
-with open('everythingdata.json', 'w') as o1:
-  o1.write('')
-  o1.write(cp)
-  json.dump(f2, o1)
-  o1.write('}')
-  print(data)
-        
+result = []
+path = "./merge_action_test/folder1/*.json"
+for filename in glob.glob(path, recursive=True):
+    with open(filename, 'r') as infile:
+        print(filename);
+       
+        result.append(json.load(infile))
+with open("merged_file.json", "w") as outfile:
+     json.dump(result, outfile) 
        
