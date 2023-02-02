@@ -3,6 +3,8 @@ name: MergeFolder
 on: 
   
   pull_request:
+    branches: 
+      - main
     types:
       - closed
 
