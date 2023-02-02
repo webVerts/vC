@@ -9,11 +9,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      - name: Merge Json
+      - name: Initiate Python
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-      - run: python merge.py
+      - name: Merge Json    
+        run: python merge.py
       - name: Commit & Push
         uses: actions-x/commit@v6
         with:
