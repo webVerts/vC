@@ -1,6 +1,6 @@
 ---
 name: MergeFolder
-on: [push]
+on: workflow_dispatch
   
 jobs:
   run:
