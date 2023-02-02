@@ -25,6 +25,5 @@ jobs:
         with:
            email: 100699190+webVerts@users.noreply.github.com
            name: GitHub Actions
-           force: true
            branch: main
      
