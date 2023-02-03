@@ -33,6 +33,6 @@ jobs:
           add_timestamp: true
           commit_prefix: "[AUTO]"
           commit_message: "Automatic commit"
-          body: "**Automated pull request**<br>"
+          
       
         
