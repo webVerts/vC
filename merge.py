@@ -7,7 +7,7 @@ for filename in glob.glob(path, recursive=True):
     with open(filename, 'r') as infile:
         print(filename);
        
-        result.append(json.load(infile))
+        result.extend(json.load(infile))
 with open("./merged_file.json", "w") as outfile:
      json.dump(result, outfile) 
      print(result)
