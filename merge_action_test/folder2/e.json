@@ -1,4 +1,107 @@
-{
-"name":"E",
-"urls":[" ", " ", " " ]  
-}
+[
+  {
+    "name": [
+      "Levine",
+      "Cash"
+    ],
+    "email": "levinecash@collaire.com"
+  },
+  {
+    "name": [
+      "Dona",
+      "Nunez"
+    ],
+    "email": "donanunez@collaire.com"
+  },
+  {
+    "name": [
+      "Lora",
+      "Bowers"
+    ],
+    "email": "lorabowers@collaire.com"
+  },
+  {
+    "name": [
+      "Gould",
+      "Lynn"
+    ],
+    "email": "gouldlynn@collaire.com"
+  },
+  {
+    "name": [
+      "Margie",
+      "Odonnell"
+    ],
+    "email": "margieodonnell@collaire.com"
+  },
+  {
+    "name": [
+      "Ashlee",
+      "Vaughn"
+    ],
+    "email": "ashleevaughn@collaire.com"
+  },
+  {
+    "name": [
+      "Alba",
+      "Roth"
+    ],
+    "email": "albaroth@collaire.com"
+  },
+  {
+    "name": [
+      "Terri",
+      "Fisher"
+    ],
+    "email": "terrifisher@collaire.com"
+  },
+  {
+    "name": [
+      "Sloan",
+      "English"
+    ],
+    "email": "sloanenglish@collaire.com"
+  },
+  {
+    "name": [
+      "Evelyn",
+      "Snow"
+    ],
+    "email": "evelynsnow@collaire.com"
+  },
+  {
+    "name": [
+      "Odonnell",
+      "Leblanc"
+    ],
+    "email": "odonnellleblanc@collaire.com"
+  },
+  {
+    "name": [
+      "Shelly",
+      "Swanson"
+    ],
+    "email": "shellyswanson@collaire.com"
+  },
+  {
+    "name": [
+      "Robles",
+      "Andrews"
+    ],
+    "email": "roblesandrews@collaire.com"
+  },
+  {
+    "name": [
+      "Romero",
+      "Hale"
+    ],
+    "email": "romerohale@collaire.com"
+  },
+  {
+    "name": [
+      "Becker",
+      "Gardner"
+    ],
+    "email": "beckergardner@collaire.com"
+  }
+]
