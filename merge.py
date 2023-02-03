@@ -2,7 +2,7 @@ import json
 import glob
 
 result = []
-path = "./merge_action_test/folder1/**/*.json"
+path = "./merge_action_test/folder2/**/*.json"
 for filename in glob.glob(path, recursive=True):
     with open(filename, 'r') as infile:
         print(filename);
