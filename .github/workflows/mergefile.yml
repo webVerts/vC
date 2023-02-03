@@ -30,4 +30,9 @@ jobs:
         uses: devops-infra/action-commit-push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          commit_message: ${{ github.event.commits[0].message }}
+          add_timestamp: true
+          commit_prefix: "[AUTO]"
+          commit_message: "Automatic commit"
+          body: "**Automated pull request**<br>"
+      
+        
