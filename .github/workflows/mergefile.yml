@@ -30,7 +30,7 @@ jobs:
         uses: devops-infra/action-commit-push@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          title: ${{ github.event.commits[0].message }}
+          commit_prefix: "[AUTO-COMMIT] foo/bar replace"
           
       
         
