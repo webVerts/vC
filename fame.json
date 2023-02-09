@@ -4,7 +4,14 @@
 {
 "name": ["webVerts","authifyAlly","name3","name4"],
 "type": "Programmer",
-"avatar":"https://seccdn.libravatar.org/avatar/44a1e2e6b6aeb46e8a01061335054333?s=50",  
+"avatar":"https://seccdn.libravatar.org/avatar/44a1e2e6b6aeb46e8a01061335054333",  
 "urls": ["github.com/webverts","ko-fi.com/webverts"]  
-}
+},
+{
+"name": ["TestName1","TestName2","TestName3","TestName4","TestName5","TestName6","TestName7","TestName8"],
+"type": "Influencer",
+"avatar":"https://secure.gravatar.com/avatar/0492df6ff41ca3b9373443a1fb674dc1",  
+"urls": ["github.com/authifyally"]
+
+}  
 ]} 
