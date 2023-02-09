@@ -13,8 +13,9 @@ for filename in glob.glob(path, recursive=True):
        
         f2=result.extend(json.load(infile))
 
-length=length=len(result)        
-cp = '{ "copyright":"me","updated_on":"'+today +'","total":"'+length+'", "source" :'        
+length=length=len(result)   
+print(length)
+cp = '{ "copyright":"me","updated_on":"'+today +'", "source" :'        
 with open("./merged_file.json", "w") as o1:
      o1.write('')
      o1.write(cp)
