@@ -1,6 +1,10 @@
 import json
 import glob
-cp = '{ "copyright":"aW", "source" :'
+import time
+
+today = time.strftime("%d-%b-%Y %I:%M:%S %p - %Z" )
+cp = '{ "copyright":"me","updated_on":"'+today +'", "source" :'
+
 result = []
 path = "./merge_action_test/folder2/**/*.json"
 for filename in glob.glob(path, recursive=True):
@@ -13,7 +17,9 @@ for filename in glob.glob(path, recursive=True):
 with open("./merged_file.json", "w") as o1:
      o1.write('')
      o1.write(cp)
+     o1.write("\n")
      json.dump(result, o1)
+     o1.write("\n")
      o1.write('}')   
    #  print(result)
        
