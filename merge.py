@@ -11,7 +11,7 @@ for filename in glob.glob(path, recursive=True):
     with open(filename, 'r') as infile:
         print(filename);
        
-        result.extend(json.load(infile))
+        f2=result.extend(json.load(infile))
 
 length=length=len(f2["source"])        
 cp = '{ "copyright":"me","updated_on":"'+today +'","total":"'+length+'", "source" :'        
