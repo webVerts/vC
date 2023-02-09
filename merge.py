@@ -9,11 +9,11 @@ result = []
 path = "./merge_action_test/folder2/**/*.json"
 for filename in glob.glob(path, recursive=True):
     with open(filename, 'r') as infile:
-        print(filename);
+      #  print(filename);
        
         f2=result.extend(json.load(infile))
 
-length=length=len(f2)        
+length=length=len(result)        
 cp = '{ "copyright":"me","updated_on":"'+today +'","total":"'+length+'", "source" :'        
 with open("./merged_file.json", "w") as o1:
      o1.write('')
