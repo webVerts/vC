@@ -1,5 +1,5 @@
 {
-
+"copyright":"me",
 "verifyWith":[
 {
 "name": ["webVerts","authifyAlly","name3","name4"],
@@ -15,10 +15,17 @@
 
 },
 {
-"name": ["Ashmita"," I just React and Review","Ashmita Kpopper","I Overreact To Music"],
+"name": ["Ashmita: I just React and Review","Ashmita Kpopper","I Overreact To Music"],
 "type": "Youtuber",
 "avatar":"https://yt3.googleusercontent.com/6tRyLtnQp_qbvo6YXXdXMUlhZ7B8L5j4fjwluEypmLD13NcBQ8Z7Spb4YkZoJQl1iwONKqtNWog=s50",  
-"urls": ["www.instagram.com/ijrrashmita","www.youtube.com/@IJustReactAndReview","www.youtube.com/channel/UCQXrgEJT7n90Q7i9a4cZiVA","www.youtube.com/channel/UCPP4PM78_ZNu2GmHxHQnA_A","www.youtube.com/@ioverreacttomusic","www.youtube.com/@AshmitaKpopper"]
+"urls": ["www.instagram.com/ijrrashmita","www.youtube.com/@ijustreactandreview","www.youtube.com/channel/UCQXrgEJT7n90Q7i9a4cZiVA","www.youtube.com/channel/UCPP4PM78_ZNu2GmHxHQnA_A","www.youtube.com/@ioverreacttomusic","www.youtube.com/@ashmitakpopper"]
+},
+{
+"name": ["Nona Prince"],
+"type": "Youtuber",
+"avatar":"https://yt3.googleusercontent.com/ytc/AL5GRJW_YvIMgAosB06YHlwNuDi-sP4URpNtaBpkaU9njA=s50",  
+"urls": ["www.youtube.com/@nonaprince","www.youtube.com/nonaprince","https://www.youtube.com/channel/UC064B-xS1MJ5ySvyqCfOEhQ","www.youtube.com/@nonaprince2","www.youtube.com/nonaprince2","www.youtube.com/nonaprince3","www.youtube.com/@nonaprince3","twitter.com/nonaprinceyt"]
 
-}    
+
+}
 ]} 
