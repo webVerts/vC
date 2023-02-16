@@ -2,7 +2,7 @@
 name: MergeFolder
 on: 
   schedule:
-    - cron: '15 6,13,18 * * *'
+    - cron: '25 6,13,18 * * *'
   
   
  # pull_request:
