@@ -12,24 +12,17 @@ jobs:
       - uses: actions/checkout@v3
         with:
           repository: authifyWeb/filters  # Source repository
-          path: source-repo
+          path: URL/
       - uses: actions/checkout@v3
         with:
           repository: webVerts/wSource  # Target repository
           path: fame/
-      - uses: actions/download-artifact@v3
-        with:
-          name: filters.js
-          path: URL/filters.js
-      - name: Minify file
-        uses: tclindner/uglify-action@v1
-        with:
-          input: URL/filters.js
-          output: filters.min.js
+      - name: Copy file
+        run: cp source-repo/URL/filters.js target-repo/path/to/filters.js
       - name: Commit changes
         run: |
-          git add filters.min.js
-          git commit -m "Copy and minify filters.js"
+          git add target-repo/path/to/filters.js
+          git commit -m "Copy filters.js"
           git push
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
