@@ -10,5 +10,4 @@ jobs:
         uses: actions/checkout@v2
       - name: Copy filters.js
         run: |
-          cp https://raw.githubusercontent.com/authifyWeb/filters/main/URL/filters.js \
-            https://raw.githubusercontent.com/webVerts/wSource/main/fame/filters.js
+          cp https://github.com/authifyWeb/filters/blob/main/URL/filters.js https://github.com/webVerts/wSource/tree/main/fame/filters.js
