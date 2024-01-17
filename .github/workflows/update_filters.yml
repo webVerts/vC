@@ -22,7 +22,7 @@ jobs:
         run: pip install requests  # Install dependencies if needed
 
       - name: Run update_filters.py
-        run: python update_filters.py
+        run: python filters_update.py
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
