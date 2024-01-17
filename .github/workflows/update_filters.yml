@@ -1,34 +1,16 @@
-name: Create filters.js
-
-on:
-  
-  
-  schedule:
-    - cron: '0 0 * * *'  # Run daily at midnight UTC
-  workflow_dispatch:  
-
+name: Update Filters
+on: 
+  workflow_dispatch:
 jobs:
-  create-filters:
+  update-filters:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-          token: ${{ secrets.GITHUB_TOKEN }} 
-
-      - name: Install dependencies
-        run: pip install requests  # Install dependencies if needed
-
-      - name: Run update_filters.py
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Run Script
         run: python filters_update.py
-
-      - name: Commit and push changes
-        uses: EndBug/add-and-commit@v9
+      - name: Publish Resulting File
+        uses: actions/upload-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          add: filters.js  # Assuming the script creates filters.js
-          message: "Created filters.js"
-          branch: main  # Optional: Specify the branch to commit to
+          path: filters.js
+          repository: webVerts/wSource
