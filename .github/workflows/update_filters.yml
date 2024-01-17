@@ -1,12 +1,11 @@
-name: Update filters.js
+name: Create filters.js
 
 on:
-  # Customize this to choose when the workflow runs
-  push:
-    branches: [main]  # Run on push to main branch
+  
+  
   schedule:
     - cron: '0 0 * * *'  # Run daily at midnight UTC
-  workflow_dispatch:
+  workflow_dispatch:  
 
 jobs:
   create-filters:
@@ -20,21 +19,14 @@ jobs:
           python-version: '3.x'  # Specify the Python version
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests  # Install dependencies if needed
 
-      - name: Create filters.js
-        run: |
-          python -c """
-          import requests
-          url = "https://raw.githubusercontent.com/authifyWeb/filters/main/URL/filters.js"
-          response = requests.get(url)
-          with open("./fame/filters.js", "w") as f:
-            f.write(response.text)
-          """
+      - name: Run update_filters.py
+        run: python update_filters.py
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v9
         with:
-          add: filters.js
+          add: filters.js  # Assuming the script creates filters.js
           message: "Created filters.js"
           branch: main  # Optional: Specify the branch to commit to
