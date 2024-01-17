@@ -18,7 +18,7 @@ jobs:
           repository: webVerts/wSource  # Target repository
           path: fame/
       - name: Copy file
-        run: cp source-repo/URL/filters.js target-repo/path/to/filters.js
+        run: cp authifyWeb/filters/URL/filters.js b.com/webVerts/wSource/tree/main/fame/filters.js
       - name: Commit changes
         run: |
           git add target-repo/path/to/filters.js
