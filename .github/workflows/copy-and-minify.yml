@@ -1,28 +1,14 @@
-name: Copy and Minify JS File
-
+name: Copy filters.js
 on:
-  schedule:
-    - cron: "0 * * * *"  # Triggers at the 0th minute of every hour (UTC)
-  workflow_dispatch:  
-
+  workflow_dispatch:
+  
 jobs:
-  copy-and-minify:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-        with:
-          repository: authifyWeb/filters  # Source repository
-          path: URL/
-      - uses: actions/checkout@v3
-        with:
-          repository: webVerts/wSource  # Target repository
-          path: fame/
-      - name: Copy file
-        run: cp authifyWeb/filters/blob/main/URL/filters.js webVerts/wSource/tree/main/fame/filters.js
-      - name: Commit changes
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Copy filters.js
         run: |
-          git add target-repo/path/to/filters.js
-          git commit -m "Copy filters.js"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          cp https://raw.githubusercontent.com/authifyWeb/filters/main/URL/filters.js \
+            https://raw.githubusercontent.com/webVerts/wSource/main/fame/filters.js
