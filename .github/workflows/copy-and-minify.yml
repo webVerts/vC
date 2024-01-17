@@ -1,13 +1,20 @@
-name: Copy filters.js
-on:
-  workflow_dispatch:
+name: Test Workflow
+on: 
   
+  workflow_dispatch:
 jobs:
   build:
+    name: Copy JSON specs to ailabs-cli config Repo
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Copy filters.js
-        run: |
-          cp https://github.com/authifyWeb/filters/blob/main/URL/filters.js https://github.com/webVerts/wSource/tree/main/fame/filters.js
+      - name: Push JSON schema for YAML configuration of CLI
+        uses: RomanosTrechlis/actions-copy-files@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          source-files: 'https://github.com/authifyWeb/filters/blob/main/URL/filters.js'
+          destination-username: 'webVerts'
+          destination-repository: 'wSource'
+          destination-directory: 'fame/'
+          commit-email: '100699190+webVerts@users.noreply.github.com'
+          commit-username: 'webVerts'
