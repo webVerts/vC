@@ -1,0 +1,35 @@
+name: Copy and Minify JS File
+
+on:
+  schedule:
+    - cron: "0 * * * *"  # Triggers at the 0th minute of every hour (UTC)
+  workflow_dispatch:  
+
+jobs:
+  copy-and-minify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: authifyWeb/filters  # Source repository
+          path: source-repo
+      - uses: actions/checkout@v3
+        with:
+          repository: webVerts/wSource  # Target repository
+          path: fame/
+      - uses: actions/download-artifact@v3
+        with:
+          name: filters.js
+          path: URL/filters.js
+      - name: Minify file
+        uses: tclindner/uglify-action@v1
+        with:
+          input: URL/filters.js
+          output: filters.min.js
+      - name: Commit changes
+        run: |
+          git add filters.min.js
+          git commit -m "Copy and minify filters.js"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
