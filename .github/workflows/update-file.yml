@@ -1,7 +1,7 @@
 name: Update File from Public Repo
 
 on:
-  # Trigger the workflow manually or on a schedule (e.g., every day)
+  # Trigger manually & daily 
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'  # Daily at midnight
@@ -13,14 +13,14 @@ jobs:
       - name: Checkout source repo
         uses: actions/checkout@v3
         with:
-          repository: authifyWeb/filters  # Source repo's name
-          token: ${{ secrets.GITHUB_TOKEN }}  
-          path: source-repo
+          repository: authifyWeb/filters  # Source repo
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: source-repo  
 
       - name: Read file from source repo
         run: |
           cd source-repo
-          content=$(cat URL/filters.js)  #  file path
+          content=$(cat URL/filters.js)  # Read the entire file
           echo "::set-output name=content::$content"
         id: read-file
 
@@ -29,7 +29,7 @@ jobs:
 
       - name: Update file in target repo
         run: |
-          echo "${{ steps.read-file.outputs.content }}" > fame/filters.js  # Target file path
+          cat - < URL/filters.js > fame/filters.js  # Use `cat -` for full content
           git config --local user.name "webVerts"
           git config --local user.email "100699190+webVerts@users.noreply.github.com"
           git add fame/filters.js
