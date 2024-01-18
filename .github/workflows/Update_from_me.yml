@@ -1,0 +1,48 @@
+YAML Lint
+Paste in your YAML and click "Go" - we'll tell you if it's valid or not, and give you a nice clean UTF-8 version of it.
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+---
+name: Update File from My Repo
+on:
+  workflow_dispatch: null
+  schedule:
+    - cron: 0 0 * * *
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push generated webpage to another repository
+        uses: nkoppel/push-files-to-another-repository@1.1.0
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-files: fame/filters.js
+          destination-username: webVerts
+          destination-repository: wSource
+          destination-directory: test2
+          commit-email: 100699190+webVerts@users.noreply.github.com
+
+Go  Reformat (strips comments)  Resolve aliases
+Valid YAML!
