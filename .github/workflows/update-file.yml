@@ -15,7 +15,7 @@ jobs:
         with:
           repository: authifyWeb/filters  # Source repo's name
           token: ${{ secrets.GITHUB_TOKEN }}  
-          path: URL/
+          path: source-repo
 
       - name: Read file from source repo
         run: |
