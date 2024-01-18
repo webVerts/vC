@@ -29,7 +29,7 @@ jobs:
 
       - name: Update file in target repo
         run: |
-          echo "${{ steps.read-file.outputs.content }}" > fame/filters.js  # Target file path
+          cat - "${{ steps.read-file.outputs.content }}" > fame/filters.js  # Target file path
           git config --local user.name "webVerts"
           git config --local user.email "100699190+webVerts@users.noreply.github.com"
           git add fame/filters.js
