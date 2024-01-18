@@ -1,7 +1,7 @@
 ---
 name: Update File from My Repo
 on:
-  workflow_dispatch: null
+  workflow_dispatch:
   schedule:
     - cron: 0 0 * * *
 jobs:
