@@ -15,7 +15,7 @@ jobs:
       - run: python update_filters.py  # Run your Python script
       - uses: EndBug/add-and-commit@v7  # Commit and push changes
         with:
-          add: 'filters.js'
+          add: 'fame/filters.js'
           message: 'Update filters.js'
           author_name: 'GitHub Action'
           author_email: 'action@github.com'
