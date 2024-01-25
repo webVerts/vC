@@ -16,6 +16,7 @@ jobs:
       - uses: EndBug/add-and-commit@v7  # Commit and push changes
         with:
           add: 'filters.js --force'
+          cwd: './fame/'
           message: 'Update filters.js'
           author_name: 'GitHub Action'
           author_email: 'action@github.com'
