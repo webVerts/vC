@@ -7,5 +7,5 @@ url = "https://raw.githubusercontent.com/authifyWeb/filters/main/URL/filters.js"
 response = requests.get(url)
 
 # Write the retrieved data to a new file
-with open("filters.js", "w") as f:
+with open("./fame/filters.js", "w") as f:
     f.write(response.text)
