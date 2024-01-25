@@ -1,0 +1,35 @@
+name: Update Filters3
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-repos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout filters repo
+        uses: actions/checkout@v3
+
+      - name: Authenticate with GitHub
+        uses: actions/checkout@v2
+        with:
+          repository: webVerts/wSource
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: /
+
+      - name: Update repo 1
+        run: |
+          cp filters.js webVerts/wSource/fame/filters.js
+          cd repo1 && git add . && git commit -m "Update filters.js" && git push origin ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Authenticate with GitHub (repo 2)
+        uses: actions/checkout@v2
+        with:
+          repository: webVerts/wSource
+          token: ${{ secrets.GITHUB_TOKEN }}
+          path: /
+
+      - name: Update repo 2
+        run: |
+          cp filters.js webVerts/wSource/logos/filters.js
+          cd repo2 && git add . && git commit -m "Update filters.js" && git push origin ${{ secrets.GITHUB_TOKEN }}
