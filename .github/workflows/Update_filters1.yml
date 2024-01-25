@@ -19,3 +19,4 @@ jobs:
           message: 'Update filters.js'
           author_name: 'GitHub Action'
           author_email: 'action@github.com'
+          force: true
