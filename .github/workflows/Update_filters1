@@ -1,0 +1,21 @@
+name: Update filters.js
+
+on:
+  workflow_dispatch:
+    
+jobs:
+  update-file:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3  # Checkout the repository
+      - uses: actions/setup-python@v4  # Set up Python environment
+        with:
+          python-version: '3.x'  # Specify the Python version
+      - run: pip install requests  # Install the 'requests' library
+      - run: python update_filters.py  # Run your Python script
+      - uses: EndBug/add-and-commit@v7  # Commit and push changes
+        with:
+          add: 'filters.js'
+          message: 'Update filters.js'
+          author_name: 'GitHub Action'
+          author_email: 'action@github.com'
