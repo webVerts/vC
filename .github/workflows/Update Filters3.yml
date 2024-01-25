@@ -21,7 +21,7 @@ jobs:
         with:
           repository: webVerts/wSource
           path: /
-      - run: cp ./filters.js
+      - run: cp wSource/filters.js wSource/filters.js
       - run: cd repo1 && git add . && git commit -m "Update filters.js" && git push
 
       - name: Update repo 2
@@ -29,5 +29,5 @@ jobs:
         with:
           repository: webVerts/wSource
           path: ./fame
-      - run: cp filters.js ./fame/filters.js
+      - run: cp wSource/filters.js wSource/fame/filters.js
       - run: cd repo2 && git add . && git commit -m "Update filters.js" && git push
