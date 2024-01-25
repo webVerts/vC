@@ -14,6 +14,13 @@ jobs:
           python-version: '3.x'  # Specify the Python version
       - run: pip install requests  # Install the 'requests' library
       - run: python update_filters.py  # Run your Python script
+
+      - uses: EndBug/add-and-commit@v7  # Commit and push changes
+        with:
+          remove: 'filters.js --force'
+          message: 'Update filters.js'
+          author_name: 'GitHub Action'
+          author_email: 'action@github.com'
       
       - uses: EndBug/add-and-commit@v7  # Commit and push changes
         with:
